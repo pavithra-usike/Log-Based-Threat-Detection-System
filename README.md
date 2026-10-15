@@ -1,33 +1,41 @@
-# Log-Based Threat Detection System — Final Team Merge
+# Log-Based Threat Detection System
 
-This version combines the original project features with the useful additions found in the teammate ZIP.
+## About the Project
 
-## Included features
-- Modern dark-themed GUI
-- Log file parsing
-- Built-in demo logs
+I developed this Python-based desktop application to identify suspicious activities in server log files. The goal was to make log analysis easier by automatically checking for patterns that may indicate potential security threats.
+
+## Features
+
+- Log file parsing and analysis
 - Rule-based threat detection
-- URL/HTML normalization before detection
-- Custom add/remove rules
-- Severity filtering
-- Failed-login counting and repeated-failed-login detection
-- Top source-IP summary
-- Desktop threat notifications
-- Real-time log watching
-- Threat Intelligence / local IOC lookup
-- Optional AbuseIPDB lookup through `ABUSEIPDB_API_KEY`
-- Automatic HIGH/CRITICAL block-list generation
-- Security dashboard and chart
-- PDF security report
-- CSV alert export
+- Detection of SQL injection, XSS, and directory traversal patterns
+- URL and HTML normalization
+- Real-time log monitoring
+- Security alerts and dashboard charts
+- Local IP indicator checking
+- Optional AbuseIPDB lookup
+- PDF and CSV report generation
+- Suspicious IP block-list generation
 
-## Run
-```bash
-pip install -r requirements.txt
-python main.py
-```
+## Technologies Used
 
-Use `sample_access.log` for testing.
+- Python
+- Tkinter
+- Regular Expressions
+- Matplotlib
+- JSON and CSV
+- ReportLab
 
-## Team merge note
-The teammate's project contributed the modern interface, demo-log loader, severity filtering, failed-login threshold detection, top source-IP summary, and Watch/Stop Watching workflow. Existing IOC, normalization, dashboard, notification, block-list, CSV and PDF features were retained.
+## How to Run
+
+1. Install Python.
+2. Install the required packages using `pip install -r requirements.txt`.
+3. Run the application using `python main.py`.
+
+## What I Learned
+
+Building this project helped me gain practical experience in Python development, log analysis, pattern matching, and cybersecurity concepts.
+
+## Future Improvements
+
+I would like to explore machine-learning-based detection, improve detection accuracy, and add integrations with other security tools.
