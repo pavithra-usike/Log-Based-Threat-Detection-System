@@ -1,50 +1,33 @@
-**Log-Based Threat Detection System**
+# Log-Based Threat Detection System — Final Team Merge
 
-## About the Project
+This version combines the original project features with the useful additions found in the teammate ZIP.
 
-I developed this project using Python to identify suspicious activities in server log files. The idea behind this project is to make it easier to analyze logs and find patterns that may indicate possible security threats.
+## Included features
+- Modern dark-themed GUI
+- Log file parsing
+- Built-in demo logs
+- Rule-based threat detection
+- URL/HTML normalization before detection
+- Custom add/remove rules
+- Severity filtering
+- Failed-login counting and repeated-failed-login detection
+- Top source-IP summary
+- Desktop threat notifications
+- Real-time log watching
+- Threat Intelligence / local IOC lookup
+- Optional AbuseIPDB lookup through `ABUSEIPDB_API_KEY`
+- Automatic HIGH/CRITICAL block-list generation
+- Security dashboard and chart
+- PDF security report
+- CSV alert export
 
-Instead of checking every log entry manually, the system uses predefined rules to detect suspicious requests and display alerts through a dashboard.
+## Run
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
-## Features
+Use `sample_access.log` for testing.
 
-- Load and analyze server log files
-- Detect suspicious patterns such as SQL injection, XSS, and directory traversal
-- Monitor log files in real time
-- Display security alerts and threat statistics on a dashboard
-- Check IP addresses against a local IOC list
-- Generate PDF and CSV reports
-- Create a list of suspicious IP addresses for review
-
-## Technologies Used
-
-- Python
-- Tkinter for the desktop interface
-- Regular Expressions for threat detection
-- Matplotlib for charts
-- JSON and CSV for handling data
-- ReportLab for PDF reports
-
-## How to Run
-
-1. Download or clone this repository.
-2. Open the project folder in your terminal.
-3. Install the required packages:
-
-   `pip install -r requirements.txt`
-
-4. Start the application:
-
-   `python main.py`
-
-## How It Works
-
-The user loads a log file, and the system reads its entries and checks them against predefined detection rules. When a suspicious pattern is found, an alert is generated and the details are shown on the dashboard. The results can also be exported as reports.
-
-## What I Learned
-
-While working on this project, I gained practical experience with Python, log file analysis, pattern matching, and basic cybersecurity concepts. It also helped me understand how automated detection can make security monitoring easier.
-
-## Future Improvements
-
-In the future, I would like to explore machine learning for threat detection and improve the system's accuracy and integration with other security tools.
+## Team merge note
+The teammate's project contributed the modern interface, demo-log loader, severity filtering, failed-login threshold detection, top source-IP summary, and Watch/Stop Watching workflow. Existing IOC, normalization, dashboard, notification, block-list, CSV and PDF features were retained.
